@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Item Storage Service</h1>
+
+    <!-- Form for storing items -->
+    <form id="storageForm">
+        <label>Item Type:</label>
+        <input list="itemsList" id="itemType" placeholder="Enter or select an item">
+        <datalist id="itemsList">
+            <!-- 1000 items will be added dynamically -->
+        </datalist>
+
+        <label>Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+
+        <label>Duration (months):</label>
+        <input type="number" id="duration" value="1" min="1">
+
+        <button type="submit">Calculate Price</button>
+    </form>
+
+    <h3>Total Price: ₹<span id="price">0</span></h3>
+
+    <!-- Table to show stored items -->
+    <h2>Stored Items</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Duration (months)</th>
+                <th>Cost (₹)</th>
+            </tr>
+        </thead>
+        <tbody id="itemsTable">
+            <!-- Confirmed items will be added here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
