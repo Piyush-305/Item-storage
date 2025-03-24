@@ -44,7 +44,7 @@ document.getElementById("storageForm").addEventListener("submit", function(event
     document.getElementById("price").textContent = totalPrice;
 
     // Store data in backend
-    fetch("http://localhost:3000/store-item", {
+    fetch("https://item-storage-backend.onrender.com/store-item", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ itemType, quantity, duration, totalPrice })
